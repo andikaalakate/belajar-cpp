@@ -7,8 +7,9 @@ int main() {
     int n = sizeof(arr)/sizeof(arr[0]);
 
     cout << "Data sebelum Insertion Sort: ";
-    for(int i = 0; i < n; i++)
+    for(int i = 0; i < n; i++) {
         cout << arr[i] << " ";
+    }
     cout << endl;
 
     // Logika Insertion Sort
@@ -17,6 +18,7 @@ int main() {
         int key = arr[i];
         int j = i - 1;
 
+        // Pindahkan elemen arr[0..i-1], yang lebih besar dari key, ke satu posisi di depan posisi saat ini
         while(j >= 0 && arr[j] > key) {
 
             arr[j+1] = arr[j];

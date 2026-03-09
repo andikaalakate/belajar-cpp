@@ -7,8 +7,9 @@ int main() {
     int n = sizeof(arr)/sizeof(arr[0]);
 
     cout << "Data sebelum Selection Sort: ";
-    for(int i = 0; i < n; i++)
+    for(int i = 0; i < n; i++) {
         cout << arr[i] << " ";
+    }
     cout << endl;
 
     // Logika Selection Sort
@@ -24,6 +25,7 @@ int main() {
 
         }
 
+        // Menukar elemen terkecil dengan elemen pertama
         int temp = arr[min_idx];
         arr[min_idx] = arr[i];
         arr[i] = temp;
