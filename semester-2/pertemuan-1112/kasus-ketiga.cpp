@@ -1,19 +1,24 @@
 ﻿#include <iostream>
 #include <vector>
-#include <string>
-
 using namespace std;
-
 int main() {
-    vector<string> inventory = {"Laptop", "Mouse", "Keyboard", "Monitor"};
+     // Deklarasi Vector
+     vector<string> kendaraan = {"Mobil", "Motor", "Sepeda"};
 
-    cout << "Daftar inventaris:" << endl;
-    for (const auto &item : inventory) {
-        cout << item << endl;
-    }
+     // Menambah elemen di belakang
+     kendaraan.push_back("Truk");
+  
+     // Mengakses dan mengubah elemen
+    kendaraan.at(0) = "Bus";
 
-    // Akses aman menggunakan at() untuk indeks ke-2
-    cout << "\nBarang di indeks ke-2: " << inventory.at(2) << endl;
+    // Menghapus elemen terakhir
+    kendaraan.pop_back();
 
-    return 0;
+    cout << "Isi Vector saat ini:\n";
+    for(string k : kendaraan) {
+        cout << "- " << k << "\n";
+ }
+ 
+   cout << "Jumlah elemen: " << kendaraan.size() << endl;
+ return 0;
 }
